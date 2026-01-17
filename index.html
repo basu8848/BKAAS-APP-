@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BKAAS Yatra Travels</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- Header with Logo -->
+  <div class="header">
+    <img src="logo.png" alt="BKAAS Logo" class="logo-image">
+    <h1>BKAAS Yatra Travels</h1>
+    <p>Your Journey, Our Responsibility</p>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+
+    <!-- Book Ride Card -->
+    <div class="card">
+      <h3>🚖 Book a Ride</h3>
+      <p>Comfortable & safe travel</p>
+      <a href="#" onclick="showBookingForm()">Book Now</a>
+    </div>
+
+    <!-- Our Services Card -->
+    <div class="card">
+      <h3>🚌 Our Services</h3>
+      <p>Tour, Rental, Pickup & Drop</p>
+      <a href="#" onclick="showServices()">View Services</a>
+    </div>
+
+    <!-- Call Us Card -->
+    <div class="card">
+      <h3>📞 Call Us</h3>
+      <p>We are here to help!</p>
+      <a href="tel:9743519007">Call Now</a>
+    </div>
+
+    <!-- WhatsApp Card -->
+    <div class="card">
+      <h3>💬 WhatsApp</h3>
+      <p>Chat with us directly</p>
+      <a href="https://wa.me/9809468356">Chat Now</a>
+    </div>
+
+    <!-- Email Card -->
+    <div class="card full">
+      <h3>📧 Email</h3>
+      <p>Send us an email anytime</p>
+      <a href="mailto:BKAASyatra4@gmail.com">Send Email</a>
+    </div>
+
+  </div>
+
+  <!-- Booking Form Popup -->
+  <div id="bookingForm" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeBookingForm()">&times;</span>
+      <h2>Book Your Ride</h2>
+      <form id="rideForm">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="tel" placeholder="Phone Number" required><br>
+        <input type="text" placeholder="Pickup Location" required><br>
+        <input type="text" placeholder="Drop Location" required><br>
+        <input type="date" required><br>
+        <button type="submit">Submit Booking</button>
+      </form>
+      <p id="bookingSuccess" style="display:none;color:green;margin-top:10px;">Booking submitted! We'll contact you soon.</p>
+    </div>
+  </div>
+
+  <!-- Services Popup -->
+  <div id="servicesPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeServices()">&times;</span>
+      <h2>Our Services</h2>
+      <ul>
+        <li>🏞️ Tour Packages</li>
+        <li>🚗 Car & Bus Rentals</li>
+        <li>🏢 Pickup & Drop</li>
+        <li>🌄 Adventure Trips</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
